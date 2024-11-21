@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foodmarket/screens/home/home_screen.dart';
+import 'package:foodmarket/screens/home/home_wrapper.dart';
 
 class AuthScreen extends StatefulWidget {
   const AuthScreen({super.key});
@@ -47,7 +47,7 @@ class _AuthScreenState extends State<AuthScreen> {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => const HomeScreen(),
+            builder: (context) => const HomeWrapper(),
           ),
         );
       } else {
@@ -119,7 +119,7 @@ class _AuthScreenState extends State<AuthScreen> {
                 ElevatedButton(
                   onPressed: () => signIn(),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.deepPurple,
+                    backgroundColor: const Color(0xFFFFC700),
                     minimumSize: const Size(double.infinity, 50),
                   ),
                   child: const Text(
